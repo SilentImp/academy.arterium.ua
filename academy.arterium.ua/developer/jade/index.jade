@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-html(lang="RU")
-  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+html(lang="uk")
+  head
 
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge;chrome=1")
     meta(name="viewport", content="maximum-scale = 1.0, user-scalable = no, width = device-width, initial-scale = 1.0")
 
-    title Академия артериум
+    title Академiя артерiум
 
     script(src="js/modernizr/modernizr.js")
 
@@ -18,3 +18,52 @@ html(lang="RU")
     script(src="js/LandgingController.js", async)
 
   body
+    header
+      h2.section-title
+        span Приєднуйтесь до участі в проекті прямо зараз!
+      .wrapper
+        a(href="/")
+          h1.logotype Академiя артерiум
+        h3.title Перша медична спільнота 
+        p Приєднуйтесь до професійної спільноти, яка об'єднує лікарів і фармацевтів усієї України. Спілкуйтесь з колегами та обмінюйтесь досвідом та знаннями з найкращими фахівцями. Стати учасником спільноти «Академія Артеріум» дуже просто!
+
+    article.questions
+      h2.section-title
+        span Ставте запитання і отримуйте докладну відповідь 
+      .wrapper
+        section
+          h3.title У вас є запитання до колег або експертів? 
+          p Учасники спільноти можуть ставити запитання нашим експертам, а також голосувати за запитання своїх колег та обговорювати їх з учасниками. 
+        section
+          h3.title як вам зручніше отримати відповідь? 
+          p Наприкінці місяця експерти відповідають на запитання спільноти. Відповіді можна отримати у відеоролику або  у форматі текстової презентації. 
+
+    article.best
+      h2.section-title
+        span на вас чекають кращі фахівці різних галузей медицини!
+      .slider
+        .wrapper
+          h3.title Експерти місяця
+          .slides
+            nav
+              a.next(href="#")
+              a.prev(href="#")
+            .slide
+              img(src="images/face.png", alt="Фотокартка")
+              .abstract
+                p На запитання відповідає:
+                p.name Ігор Березняков 
+                p.details д.м.н., професор, завідуючий кафедрою терапії Харківської медичної академії післядипломної освіти, президент Української асоціації за раціональне використання антибіотиків
+            .slide
+              img(src="images/face.png", alt="Фотокартка")
+              .abstract
+                p На запитання відповідає:
+                p.name Багабут Маламутович 
+                p.details д.м.н., професор, завідуючий кафедрою терапії Харківської медичної академії післядипломної освіти, президент Української асоціації за раціональне використання антибіотиків
+
+    footer
+      .wrapper
+        a.developed_by(href="http://territory.com.ua/") CBT
+        p.copyright © 2014 Корпорація Arterium
+        a.rules(href="#") Умови використання
+

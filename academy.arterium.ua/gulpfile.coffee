@@ -10,7 +10,6 @@ sourcemaps  = require 'gulp-sourcemaps'
 concat      = require 'gulp-concat'
 svgmin      = require 'gulp-svgmin'
 svg2png     = require 'gulp-svg2png'
-pngmin      = require 'gulp-pngmin'
 prettify    = require 'gulp-html-prettify'
 cssbeautify = require 'gulp-cssbeautify'
 ghpages     = require 'gh-pages'
@@ -18,18 +17,20 @@ path        = require 'path'
 w3cjs       = require 'gulp-w3cjs'
 esformatter = require 'gulp-esformatter'
 coffeelint  = require 'gulp-coffeelint'
-scsslint    = require 'gulp-scss-lint'
+
+imagemin    = require 'gulp-imagemin'
+pngcrush    = require 'imagemin-pngcrush'
 
 dev_path =
   jade:       'developer/jade/**.jade'
   css:        'developer/css/**.css'
   css_tmp:    'developer/css/'
-  images:     'developer/images/*.png'
+  images:     'developer/images/*'
   js:         'developer/js/**.js'
   coffee:     'developer/coffee/**.coffee'
-  sass:       'developer/sass/**.styl'
+  sass:       'developer/sass/**.sass'
   fonts:      'developer/fonts/**'
-  svg:        'developer/svg/**.svg'
+  svg:        'developer/svg/**/*.svg'
 
 prod_path =
   html:       'production/'
@@ -54,21 +55,33 @@ gulp.task('svg', ()->
 
 gulp.task('images', ()->
   return gulp.src(dev_path.images)
-    .pipe(pngmin())
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngcrush()]
+      }))
     .pipe(gulp.dest(prod_path.images))
 )
 
 gulp.task('svg2png2x', ()->
   return gulp.src(dev_path.svg)
     .pipe(svg2png(2))
-    .pipe(pngmin())
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngcrush()]
+      }))
     .pipe(gulp.dest(prod_path.images2x))
 )
 
 gulp.task('svg2png', ['svg2png2x'], ()->
   return gulp.src(dev_path.svg)
     .pipe(svg2png())
-    .pipe(pngmin())
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngcrush()]
+      }))
     .pipe(gulp.dest(prod_path.images))
 )
 
@@ -83,11 +96,12 @@ gulp.task('html', ()->
 
 gulp.task('sass', ()->
   return gulp.src(dev_path.sass)
-    .pipe(scsslint())
-    .pipe(sourcemaps.init())
-      .pipe(sass())
-      .pipe(concat('sass.css'))
-    .pipe(sourcemaps.write())
+    # .pipe(sourcemaps.init())
+    .pipe(sass({
+      errLogToConsole: true
+      }))
+    .pipe(concat('sass.css'))
+    # .pipe(sourcemaps.write())
     .pipe(gulp.dest(dev_path.css_tmp))
 )
 
@@ -137,7 +151,7 @@ gulp.task('deploy', ()->
 
 
 gulp.task('watch', ()->
-  gulp.watch dev_path.svg,        ['svg', 'svg2png']
+  gulp.watch dev_path.svg,        ['svg', 'svg2png', 'svg2png2x']
   gulp.watch dev_path.fonts,      ['fonts']
   gulp.watch dev_path.jade,       ['html']
   gulp.watch dev_path.sass,       ['css']
@@ -147,6 +161,6 @@ gulp.task('watch', ()->
   gulp.watch dev_path.images,     ['images']
 )
 
-gulp.task 'default', ['dev','watch']
-gulp.task 'dev', ['svg','fonts','html','css','coffee','js','images']
+gulp.task 'default', ['dev', 'watch']
+gulp.task 'dev', ['svg', 'svg2png', 'svg2png2x', 'fonts', 'html', 'css', 'coffee', 'js', 'images']
 
