@@ -18,6 +18,23 @@ html(lang="uk")
     script(src="js/LandgingController.js", async)
 
   body
+
+    form.registration_form(action="/register/", method="post")
+      h2.title Реєстрація
+      fieldset
+        label(for="register-name") Им’я користувача
+        input.name(type="text", name="name", id="register-name", value="", required="required")
+        label(for="register-email") E-mail
+        input.email(type="email", name="email", id="register-email", value="", required="required")
+      nav
+        button(type="submit") Зареєструватися
+        p Ви також можете скористуватися реєстрацією соціальних мереж
+        a.fb(href="#") Facebook
+        a.vk(href="#") ВКонтакте
+        p Для детального ознайомлення перейдіть на сайт
+        a.site(href="#") Перейти на сайт
+
+
     header
       h2.section-title
         span Приєднуйтесь до участі в проекті прямо зараз!
@@ -66,4 +83,3 @@ html(lang="uk")
         a.developed_by(href="http://territory.com.ua/") CBT
         p.copyright © 2014 Корпорація Arterium
         a.rules(href="#") Умови використання
-

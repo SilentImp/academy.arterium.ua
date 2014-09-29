@@ -16,6 +16,8 @@ html {
   height: 100%;
   position: relative;
   font-family: 'Gotham Pro', sans-serif; }
+  html[lang="ru"] body header .wrapper .logotype {
+    background-image: url("../svg/logo_ru.svg"); }
   html body {
     position: relative;
     min-height: 100%;
@@ -99,7 +101,7 @@ html {
           left: 0;
           right: 0;
           margin: auto;
-          background: url("../svg/logo_ru.svg") 50% 50% no-repeat; }
+          background: url("../svg/logo_uk.svg") 50% 50% no-repeat; }
         html body header .wrapper .title {
           color: #668fcb;
           text-transform: uppercase;
@@ -244,7 +246,7 @@ html {
             font-size: 60px;
             line-height: 80px;
             color: #668FCB;
-            font-family: 'Marion'; }
+            font-family: 'Marion', serif; }
     html body .questions {
       background: #7499D0 url('../images/ask_bg.jpg') 100% 50% no-repeat;
       background-size: cover;
@@ -314,7 +316,7 @@ html {
             left: 0;
             right: 0;
             margin: auto;
-            background: #fff url("../svg/reg.svg") 50% 50% no-repeat;
+            background: #fff url("../svg/reg_blue.svg") 50% 50% no-repeat;
             height: 88px;
             width: 88px;
             border-radius: 100%;
@@ -364,3 +366,182 @@ html {
             text-decoration: none; }
         html body footer .wrapper .copyright {
           float: left; }
+
+.registration_form {
+  position: absolute;
+  top: 82px;
+  left: 56%;
+  width: 356px;
+  height: 562px;
+  margin-left: -30px;
+  background-color: #FBFBFB;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  color: #7D7F81;
+  font-size: 0; }
+  .registration_form .title {
+    margin: 15px 0 0;
+    font-size: 23px;
+    line-height: 100px;
+    white-space: nowrap;
+    color: #668fcb;
+    font-family: 'Marion', serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 37px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: -35px; }
+  .registration_form:after {
+    content: ".";
+    display: block;
+    z-index: -1;
+    background-color: #FBFBFB;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+  .registration_form:before {
+    content: ".";
+    display: block;
+    width: 108px;
+    height: 108px;
+    border-radius: 100%;
+    z-index: -2;
+    background-color: #FBFBFB;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    margin: -62px 0 0 -54px; }
+  .registration_form fieldset {
+    padding: 0 37px 27px;
+    margin-top: -10px; }
+    .registration_form fieldset:before {
+      content: ".";
+      width: 88px;
+      height: 88px;
+      border-radius: 100%;
+      position: absolute;
+      left: 50%;
+      top: -52px;
+      margin: 0 0 0 -44px;
+      overflow: hidden;
+      text-indent: -9999px;
+      z-index: 1;
+      background: #668FCB url("../svg/icons/reg.svg") 59% 50% no-repeat; }
+    .registration_form fieldset label {
+      display: block;
+      line-height: 27px;
+      font-size: 12px;
+      margin: 0 0 -1px;
+      font-family: 'Gotham Pro', sans-serif; }
+    .registration_form fieldset input {
+      margin: 0;
+      padding: 0 15px 0 40px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 35px;
+      border-radius: 18px;
+      line-height: 35px;
+      box-shadow: none;
+      border: 1px solid #bcbdbe;
+      background: #fff;
+      outline: none;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      color: #7D7F81;
+      font-size: 12px; }
+      .registration_form fieldset input.name {
+        background-image: url("../svg/user.svg"); }
+      .registration_form fieldset input.email {
+        background-image: url("../svg/envelope.svg"); }
+  .registration_form nav {
+    text-align: center;
+    padding: 0 70px;
+    font-size: 0;
+    font-family: 'Gotham Pro', sans-serif; }
+    .registration_form nav button {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 18px;
+      padding: 0 0 0 17px;
+      width: 100%;
+      box-sizing: border-box;
+      border-style: none;
+      margin: 0;
+      padding: 0;
+      background: #e63aab;
+      color: #fff; }
+      .registration_form nav button:hover {
+        cursor: pointer;
+        background-color: #d21b95; }
+    .registration_form nav a {
+      display: block;
+      margin-top: 13px;
+      height: 35px;
+      border-radius: 18px;
+      padding: 0;
+      font-size: 12px;
+      line-height: 35px;
+      text-decoration: none;
+      color: #fff; }
+      .registration_form nav a:hover {
+        cursor: pointer; }
+      .registration_form nav a.fb {
+        background-color: #3b5999;
+        text-align: left;
+        padding: 0 0 0 18px;
+        overflow: hidden;
+        position: relative; }
+        .registration_form nav a.fb:hover {
+          background-color: #2d4574; }
+          .registration_form nav a.fb:hover:after {
+            background-color: #1f3157;
+            border-left: 1px solid #1f3157; }
+        .registration_form nav a.fb:after {
+          content: ".";
+          position: absolute;
+          height: 35px;
+          width: 46px;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: #2D467C url('../svg/icons/facebook.svg') 50% 50% no-repeat;
+          border-left: 1px solid #34508b;
+          overflow: hidden;
+          text-indent: -999px; }
+      .registration_form nav a.vk {
+        background-color: #55acef;
+        text-align: left;
+        padding: 0 0 0 18px;
+        overflow: hidden;
+        position: relative; }
+        .registration_form nav a.vk:hover {
+          background-color: #137bcb; }
+          .registration_form nav a.vk:hover:after {
+            background-color: #0e66a9;
+            border-left: 1px solid #1071bc; }
+        .registration_form nav a.vk:after {
+          content: ".";
+          position: absolute;
+          height: 35px;
+          width: 46px;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: #2f9bee url('../svg/icons/vkontakte.svg') 50% 50% no-repeat;
+          border-left: 1px solid #43a4ef;
+          overflow: hidden;
+          text-indent: -999px; }
+      .registration_form nav a.site {
+        background-color: #668fcb; }
+        .registration_form nav a.site:hover {
+          background-color: #335d98; }
+    .registration_form nav p {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 28px; }
