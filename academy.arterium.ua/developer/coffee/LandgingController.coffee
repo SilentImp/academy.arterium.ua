@@ -7,6 +7,7 @@ class LandgingController
 
     @form = $ '.registration_form'
     $(window).on 'scroll', @stickyForm
+    $(window).on 'resize', @rebuildPlayer
     @stickyForm()
 
     @current = 0
@@ -35,6 +36,11 @@ class LandgingController
     for item in @items
       item.setAttribute 'data-num', i
       i++
+
+  rebuildPlayer: =>
+    @width = @list.width()
+    @list.css 'left',
+      (-@width*parseInt(@current_slide.attr('data-num'),10))+'px'
 
   removeJump: =>
     @list.removeClass('jump')

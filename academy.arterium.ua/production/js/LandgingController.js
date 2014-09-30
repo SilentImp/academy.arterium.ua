@@ -13,6 +13,7 @@ LandgingController = (function() {
     this.rewindForward = __bind(this.rewindForward, this);
     this.nextSlide = __bind(this.nextSlide, this);
     this.removeJump = __bind(this.removeJump, this);
+    this.rebuildPlayer = __bind(this.rebuildPlayer, this);
     var i, item, _i, _len, _ref;
     this.itype = 'click';
     this.html = $('html');
@@ -21,6 +22,7 @@ LandgingController = (function() {
     }
     this.form = $('.registration_form');
     $(window).on('scroll', this.stickyForm);
+    $(window).on('resize', this.rebuildPlayer);
     this.stickyForm();
     this.current = 0;
     this.time = 600;
@@ -47,6 +49,11 @@ LandgingController = (function() {
       i++;
     }
   }
+
+  LandgingController.prototype.rebuildPlayer = function() {
+    this.width = this.list.width();
+    return this.list.css('left', (-this.width * parseInt(this.current_slide.attr('data-num'), 10)) + 'px');
+  };
 
   LandgingController.prototype.removeJump = function() {
     return this.list.removeClass('jump');

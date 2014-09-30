@@ -12,6 +12,49 @@
   font-weight: normal;
   font-style: normal; }
 
+.section-title {
+  background-color: #fff;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 57px;
+  height: 57px;
+  padding: 0 80px 0 40px;
+  color: #668fcb;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 56%;
+  max-width: 56%;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  font-family: 'Gotham Pro', sans-serif; }
+  .section-title span {
+    position: absolute;
+    right: 0;
+    min-width: 760px;
+    margin-right: 10.714%;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .section-title:after {
+    content: ".";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    font-size: 0;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent #668fcb;
+    border-style: solid;
+    margin-top: -10px; }
+
 html {
   height: 100%;
   position: relative;
@@ -21,7 +64,7 @@ html {
   html body {
     position: relative;
     min-height: 100%;
-    min-width: 1280px;
+    min-width: 1000px;
     box-sizing: border-box;
     padding-bottom: 57px; }
     html body header {
@@ -31,50 +74,13 @@ html {
       overflow: hidden; }
       html body header .section-title {
         background-color: #668FCB;
-        white-space: nowrap;
-        font-size: 16px;
-        line-height: 57px;
-        height: 57px;
-        padding: 0 80px 0 40px;
-        color: #fff;
-        position: absolute;
-        bottom: 40px;
-        left: 0;
-        width: 56%;
-        max-width: 56%;
-        box-sizing: border-box;
-        z-index: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-transform: uppercase;
-        font-family: 'Gotham Pro', sans-serif; }
-        html body header .section-title span {
-          position: absolute;
-          right: 0;
-          min-width: 600px;
-          margin-right: 10.714%;
-          display: inline-block;
-          text-align: left;
-          overflow: hidden;
-          text-overflow: ellipsis; }
+        color: #fff; }
         html body header .section-title:after {
-          content: ".";
-          display: block;
-          position: absolute;
-          top: 50%;
-          right: 40px;
-          height: 0;
-          line-height: 0;
-          overflow: hidden;
-          font-size: 0;
-          border-width: 10px 0 10px 18px;
-          border-color: transparent transparent transparent #fff;
-          border-style: solid;
-          margin-top: -10px; }
+          border-color: transparent transparent transparent #fff; }
       html body header .wrapper {
         min-height: 248px;
-        max-width: 688px;
-        padding: 220px 552px 117px 40px;
+        max-width: 908px;
+        padding: 220px 652px 117px 40px;
         margin: auto;
         position: relative; }
         html body header .wrapper:after {
@@ -114,7 +120,8 @@ html {
         html body header .wrapper p {
           color: #7d7f81;
           font-size: 12px;
-          line-height: 16px; }
+          line-height: 16px;
+          max-width: 700px; }
     html body .best {
       background: #7499D0 url('../images/best_bg.jpg') 50% 50% no-repeat;
       background-size: cover;
@@ -122,50 +129,15 @@ html {
       padding: 165px 0 212px; }
       html body .best .section-title {
         background-color: #668FCB;
-        white-space: nowrap;
-        font-size: 16px;
-        line-height: 57px;
-        height: 57px;
-        padding: 0 80px 0 40px;
-        color: #fff;
-        position: absolute;
-        bottom: 40px;
-        left: 0;
-        width: 56%;
-        box-sizing: border-box;
-        z-index: 1;
-        text-transform: uppercase;
-        font-family: 'Gotham Pro', sans-serif;
-        text-align: right; }
-        html body .best .section-title span {
-          position: absolute;
-          right: 0;
-          min-width: 600px;
-          margin-right: 10.714%;
-          display: inline-block;
-          text-align: left;
-          overflow: hidden;
-          text-overflow: ellipsis; }
+        color: #fff; }
         html body .best .section-title:after {
-          content: ".";
-          display: block;
-          position: absolute;
-          top: 50%;
-          right: 40px;
-          height: 0;
-          line-height: 0;
-          overflow: hidden;
-          font-size: 0;
-          border-width: 10px 0 10px 18px;
-          border-color: transparent transparent transparent #fff;
-          border-style: solid;
-          margin-top: -10px; }
+          border-color: transparent transparent transparent #fff; }
       html body .best .slider {
         background-color: #668FCB;
         height: 212px; }
         html body .best .slider .wrapper {
           position: relative;
-          max-width: 1200px;
+          max-width: 1520px;
           margin: auto; }
           html body .best .slider .wrapper .slides {
             display: block;
@@ -269,48 +241,11 @@ html {
       position: relative; }
       html body .questions .section-title {
         background-color: #fff;
-        white-space: nowrap;
-        font-size: 16px;
-        line-height: 57px;
-        height: 57px;
-        padding: 0 80px 0 40px;
-        color: #668fcb;
-        position: absolute;
-        bottom: 40px;
-        left: 0;
-        width: 56%;
-        max-width: 56%;
-        box-sizing: border-box;
-        z-index: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-transform: uppercase;
-        font-family: 'Gotham Pro', sans-serif; }
-        html body .questions .section-title span {
-          position: absolute;
-          right: 0;
-          min-width: 600px;
-          margin-right: 10.714%;
-          display: inline-block;
-          text-align: left;
-          overflow: hidden;
-          text-overflow: ellipsis; }
+        color: #668fcb; }
         html body .questions .section-title:after {
-          content: ".";
-          display: block;
-          position: absolute;
-          top: 50%;
-          right: 40px;
-          height: 0;
-          line-height: 0;
-          overflow: hidden;
-          font-size: 0;
-          border-width: 10px 0 10px 18px;
-          border-color: transparent transparent transparent #668fcb;
-          border-style: solid;
-          margin-top: -10px; }
+          border-color: transparent transparent transparent #668fcb; }
       html body .questions .wrapper {
-        max-width: 1200px;
+        max-width: 1520px;
         padding: 0 40px;
         min-height: 585px;
         margin: auto;
@@ -362,7 +297,7 @@ html {
       html body footer .wrapper {
         text-align: center;
         font-size: 12px;
-        max-width: 1200px;
+        max-width: 1520px;
         padding: 0 40px;
         margin: auto;
         color: #FFF;
@@ -564,3 +499,22 @@ html {
       font-size: 12px;
       line-height: 14px;
       margin-top: 28px; }
+
+@media screen and (max-width: 1200px) {
+  html body header .wrapper {
+    max-width: 1008px;
+    padding: 220px 552px 117px 40px; } }
+
+@media screen and (max-width: 1600px) {
+  html body .section-title {
+    text-align: left; }
+  html body .section-title span {
+    min-width: 0;
+    margin: 0;
+    position: relative;
+    right: auto;
+    display: block; } }
+
+@media screen and (max-width: 1000px) {
+  .registration_form.sticky {
+    left: 560px; } }
