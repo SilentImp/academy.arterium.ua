@@ -240,7 +240,8 @@ html {
             font-size: 60px;
             line-height: 80px;
             color: #668FCB;
-            font-family: 'Marion', serif; }
+            font-family: 'Marion', serif;
+            text-transform: uppercase; }
     html body .questions {
       background: #7499D0 url('../images/ask_bg.jpg') 100% 50% no-repeat;
       background-size: cover;
