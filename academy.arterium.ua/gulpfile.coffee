@@ -118,13 +118,13 @@ gulp.task('coffee', ()->
   return gulp.src(dev_path.coffee)
     .pipe(coffeelint())
     .pipe(coffeelint.reporter())
-    .pipe(sourcemaps.init())
+    # .pipe(sourcemaps.init())
     .pipe(coffee({
       bare: true
       }))
-    .pipe(uglify())
-    # .pipe(esformatter({indent: {value: '  '}}))
-    .pipe(sourcemaps.write())
+    # .pipe(uglify())
+    .pipe(esformatter({indent: {value: '  '}}))
+    # .pipe(sourcemaps.write())
     .pipe(gulp.dest(prod_path.js))
 )
 
@@ -151,7 +151,7 @@ gulp.task('deploy', ()->
 
 
 gulp.task('watch', ()->
-  gulp.watch dev_path.svg,        ['svg', 'svg2png', 'svg2png2x']
+  gulp.watch dev_path.svg,        ['svg']
   gulp.watch dev_path.fonts,      ['fonts']
   gulp.watch dev_path.jade,       ['html']
   gulp.watch dev_path.sass,       ['css']
@@ -162,5 +162,5 @@ gulp.task('watch', ()->
 )
 
 gulp.task 'default', ['dev', 'watch']
-gulp.task 'dev', ['svg', 'svg2png', 'svg2png2x', 'fonts', 'html', 'css', 'coffee', 'js', 'images']
+gulp.task 'dev', ['svg', 'fonts', 'html', 'css', 'coffee', 'js', 'images']
 

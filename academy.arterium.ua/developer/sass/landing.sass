@@ -199,6 +199,15 @@ html{
             font-size: 0;
             line-height: 212px; 
             position: relative;
+            .list{
+              position: relative;
+              left: 0;
+              height: 212px;
+              transition: left .25s;
+              &.jump{
+                transition: none;
+                }
+              }
             nav{
               .next,
               .prev{
@@ -252,9 +261,18 @@ html{
                     font-size: 28px;
                     line-height: 36px;
                     margin: 20px 0 10px;
+                    display: block;
+                    max-height: 72px;
+                    overflow: hidden;
+                    position: relative;
+                    text-overflow: ellipsis;
                     }
                   &.details{
-                    width: auto;
+                    display: block;
+                    max-height: 48px;
+                    overflow: hidden;
+                    position: relative;
+                    text-overflow: ellipsis;
                     font-style: italic;
                     }
                   }
@@ -426,7 +444,8 @@ html{
 
 .registration_form{
   position: absolute;
-  top: 82px;
+  // top: 82px;
+  top: 292px;
   left: 56%;
   width: 356px;
   height: 562px;
@@ -436,6 +455,11 @@ html{
   z-index: 10;
   color: #7D7F81;
   font-size: 0;
+  
+  &.sticky{
+    top: 82px;
+    position: fixed;
+    }
 
   .title{
     margin: 15px 0 0;

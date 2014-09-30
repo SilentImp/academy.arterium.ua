@@ -176,6 +176,13 @@ html {
             font-size: 0;
             line-height: 212px;
             position: relative; }
+            html body .best .slider .wrapper .slides .list {
+              position: relative;
+              left: 0;
+              height: 212px;
+              transition: left 0.25s; }
+              html body .best .slider .wrapper .slides .list.jump {
+                transition: none; }
             html body .best .slider .wrapper .slides nav .next, html body .best .slider .wrapper .slides nav .prev {
               position: absolute;
               height: 0;
@@ -222,9 +229,18 @@ html {
                   html body .best .slider .wrapper .slides .slide .abstract p.name {
                     font-size: 28px;
                     line-height: 36px;
-                    margin: 20px 0 10px; }
+                    margin: 20px 0 10px;
+                    display: block;
+                    max-height: 72px;
+                    overflow: hidden;
+                    position: relative;
+                    text-overflow: ellipsis; }
                   html body .best .slider .wrapper .slides .slide .abstract p.details {
-                    width: auto;
+                    display: block;
+                    max-height: 48px;
+                    overflow: hidden;
+                    position: relative;
+                    text-overflow: ellipsis;
                     font-style: italic; }
               html body .best .slider .wrapper .slides .slide img {
                 width: 172px;
@@ -369,7 +385,7 @@ html {
 
 .registration_form {
   position: absolute;
-  top: 82px;
+  top: 292px;
   left: 56%;
   width: 356px;
   height: 562px;
@@ -379,6 +395,9 @@ html {
   z-index: 10;
   color: #7D7F81;
   font-size: 0; }
+  .registration_form.sticky {
+    top: 82px;
+    position: fixed; }
   .registration_form .title {
     margin: 15px 0 0;
     font-size: 23px;
