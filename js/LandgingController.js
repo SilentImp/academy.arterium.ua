@@ -113,7 +113,7 @@ LandgingController = (function() {
       return this.form.css('height', 'auto');
     } else {
       this.form.toggleClass('sticky', false);
-      return this.form.css('height', Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 369 + top);
+      return this.form.css('height', Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 423 + top);
     }
   };
 
