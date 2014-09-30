@@ -138,6 +138,7 @@ html {
         html body .best .slider .wrapper {
           position: relative;
           max-width: 1520px;
+          padding: 0 40px;
           margin: auto; }
           html body .best .slider .wrapper .slides {
             display: block;
@@ -197,17 +198,22 @@ html {
                 color: #FFF; }
                 html body .best .slider .wrapper .slides .slide .abstract p {
                   font-size: 12px;
-                  line-height: 16px; }
+                  line-height: 16px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
                   html body .best .slider .wrapper .slides .slide .abstract p.name {
                     font-size: 28px;
                     line-height: 36px;
                     margin: 20px 0 10px;
                     display: block;
                     max-height: 72px;
+                    white-space: normal;
                     overflow: hidden;
                     position: relative;
                     text-overflow: ellipsis; }
                   html body .best .slider .wrapper .slides .slide .abstract p.details {
+                    white-space: normal;
                     display: block;
                     max-height: 48px;
                     overflow: hidden;
@@ -229,7 +235,7 @@ html {
             z-index: 0;
             position: absolute;
             bottom: 100%;
-            left: 0;
+            left: 40px;
             margin-bottom: -20px;
             font-size: 60px;
             line-height: 80px;
