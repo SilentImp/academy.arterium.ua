@@ -89,12 +89,16 @@ class LandgingController
     @prev.trigger @itype
 
 
-
   stickyForm: (event)=>
-    if $(window).scrollTop() > 208
+    top = $(window).scrollTop()
+    if top > 208
       @form.toggleClass 'sticky', true
+      @form.css('height', 'auto')
     else
       @form.toggleClass 'sticky', false
+      @form.css('height', Math.max(
+        document.documentElement.clientHeight,
+        window.innerHeight || 0)-369+top)
 
     
 $(document).ready ()->

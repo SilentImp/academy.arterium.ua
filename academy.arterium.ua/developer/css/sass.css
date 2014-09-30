@@ -322,16 +322,24 @@ html {
   position: absolute;
   top: 292px;
   left: 56%;
+  bottom: 77px;
   width: 356px;
-  height: 562px;
+  min-height: 562px;
   margin-left: -30px;
   background-color: #FBFBFB;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
   z-index: 10;
   color: #7D7F81;
-  font-size: 0; }
+  font-size: 0;
+  padding: 0 0 54px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
   .registration_form.sticky {
     top: 82px;
+    height: auto;
+    left: 56%;
     position: fixed; }
   .registration_form .title {
     margin: 15px 0 0;
@@ -369,7 +377,7 @@ html {
     left: 50%;
     margin: -62px 0 0 -54px; }
   .registration_form fieldset {
-    padding: 0 37px 27px;
+    padding: 0 37px;
     margin-top: -10px; }
     .registration_form fieldset:before {
       content: ".";
@@ -384,6 +392,24 @@ html {
       text-indent: -9999px;
       z-index: 1;
       background: #668FCB url("../svg/icons/reg.svg") 59% 50% no-repeat; }
+    .registration_form fieldset button {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 18px;
+      padding: 0 0 0 17px;
+      width: 216px;
+      box-sizing: border-box;
+      border-style: none;
+      margin: 27px auto 0;
+      padding: 0;
+      background: #e63aab;
+      color: #fff; }
+      .registration_form fieldset button:hover {
+        cursor: pointer;
+        background-color: #d21b95; }
     .registration_form fieldset label {
       display: block;
       line-height: 27px;
@@ -415,24 +441,6 @@ html {
     padding: 0 70px;
     font-size: 0;
     font-family: 'Gotham Pro', sans-serif; }
-    .registration_form nav button {
-      display: block;
-      margin-top: 12px;
-      font-size: 12px;
-      line-height: 35px;
-      height: 35px;
-      border-radius: 18px;
-      padding: 0 0 0 17px;
-      width: 100%;
-      box-sizing: border-box;
-      border-style: none;
-      margin: 0;
-      padding: 0;
-      background: #e63aab;
-      color: #fff; }
-      .registration_form nav button:hover {
-        cursor: pointer;
-        background-color: #d21b95; }
     .registration_form nav a {
       display: block;
       margin-top: 13px;

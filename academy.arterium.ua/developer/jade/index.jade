@@ -18,7 +18,7 @@ html(lang="uk")
     script(src="js/LandgingController.js", async)
 
   body
-
+  
     form.registration_form(action="/register/", method="post")
       h2.title Реєстрація
       fieldset
@@ -26,11 +26,12 @@ html(lang="uk")
         input.name(type="text", name="name", id="register-name", value="", required="required")
         label(for="register-email") E-mail
         input.email(type="email", name="email", id="register-email", value="", required="required")
-      nav
         button(type="submit") Зареєструватися
+      nav
         p Ви також можете скористуватися реєстрацією соціальних мереж
         a.fb(href="https://www.facebook.com/ARTERIUM.corp") Facebook
         a.vk(href="#") ВКонтакте
+      nav 
         p Для детального ознайомлення перейдіть на сайт
         a.site(href="http://academy.arterium.ua/") Перейти на сайт
 

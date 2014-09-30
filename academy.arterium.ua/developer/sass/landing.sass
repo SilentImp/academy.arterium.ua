@@ -384,20 +384,29 @@ html{
 
 .registration_form{
   position: absolute;
-  // top: 82px;
   top: 292px;
   left: 56%;
+    
+  bottom: 77px;
   width: 356px;
-  height: 562px;
+  min-height: 562px;
   margin-left: -30px;
   background-color: #FBFBFB;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .3); 
   z-index: 10;
   color: #7D7F81;
   font-size: 0;
+
+  padding: 0 0 54px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   
   &.sticky{
     top: 82px;
+    height: auto;
+    left: 56%;
     position: fixed;
     }
 
@@ -443,7 +452,7 @@ html{
     }
 
   fieldset{
-    padding: 0 37px 27px;
+    padding: 0 37px;
     margin-top: -10px;
     &:before{
       content:".";
@@ -458,6 +467,26 @@ html{
       text-indent: -9999px;
       z-index: 1; 
       background: #668FCB url("../svg/icons/reg.svg") 59% 50% no-repeat;
+      }
+    button{
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 18px;
+      padding: 0 0 0 17px;
+      width: 216px;
+      box-sizing: border-box;
+      border-style: none;
+      margin: 27px auto 0;
+      padding: 0;
+      background: #e63aab;
+      color: #fff;
+      &:hover{
+        cursor: pointer;
+        background-color: darken(#e63aab, 10%); 
+        }
       }
     label{
       display: block;
@@ -495,26 +524,6 @@ html{
     padding: 0 70px;
     font-size: 0;
     font-family: 'Gotham Pro', sans-serif;
-    button{
-      display: block;
-      margin-top: 12px;
-      font-size: 12px;
-      line-height: 35px;
-      height: 35px;
-      border-radius: 18px;
-      padding: 0 0 0 17px;
-      width: 100%;
-      box-sizing: border-box;
-      border-style: none;
-      margin: 0;
-      padding: 0;
-      background: #e63aab;
-      color: #fff;
-      &:hover{
-        cursor: pointer;
-        background-color: darken(#e63aab, 10%); 
-        }
-      }
     a{
       display: block;
       margin-top: 13px;
@@ -604,7 +613,6 @@ html{
     }
   }
 
-// @media screen and (max-width: 1280px) {
 @media screen and (max-width: 1600px) {
   html body .section-title{
     text-align: left;
