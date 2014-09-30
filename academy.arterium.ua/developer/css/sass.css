@@ -359,8 +359,7 @@ html {
     text-transform: uppercase;
     padding: 0 37px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    text-indent: -35px; }
+    text-overflow: ellipsis; }
   .registration_form:after {
     content: ".";
     display: block;
