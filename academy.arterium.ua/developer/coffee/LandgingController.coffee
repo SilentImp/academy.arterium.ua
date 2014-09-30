@@ -98,7 +98,7 @@ class LandgingController
       @form.toggleClass 'sticky', false
       @form.css('height', Math.max(
         document.documentElement.clientHeight,
-        window.innerHeight || 0)-369+top)
+        window.innerHeight || 0)-423+top)
 
     
 $(document).ready ()->
