@@ -106,10 +106,14 @@ LandgingController = (function() {
   };
 
   LandgingController.prototype.stickyForm = function(event) {
-    if ($(window).scrollTop() > 208) {
-      return this.form.toggleClass('sticky', true);
+    var top;
+    top = $(window).scrollTop();
+    if (top > 208) {
+      this.form.toggleClass('sticky', true);
+      return this.form.css('height', 'auto');
     } else {
-      return this.form.toggleClass('sticky', false);
+      this.form.toggleClass('sticky', false);
+      return this.form.css('height', Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 369 + top);
     }
   };
 
