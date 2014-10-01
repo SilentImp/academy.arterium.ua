@@ -1,86 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
     <meta name="viewport" content="maximum-scale = 1.0, user-scalable = no, width = device-width, initial-scale = 1.0" />
-    <title>LIVE4 GoPro stream</title>
+    <title>Академiя артерiум</title>
+    <script src="js/modernizr/modernizr.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="player/styles.css" />
-    <script src="player/Live4PlayerController.js"></script>
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="js/LandgingController.js" async="async"></script>
 </head>
 
-<body class="live4gopro-stream">
-    <article>
-        <div data-id="" class="live4player">
-            <div class="live4player-base"></div>
-            <video width="100%" height="100%" preload="metadata" fullscreenEnabled="fullscreenEnabled" class="live4player-video"></video>
-            <div class="live4player-watermark"></div>
-            <div class="live4player-loading-screen">
-                <div class="live4player-loading-screen-icon"></div>
-            </div>
-            <div class="live4player-navigation">
-                <div class="live4player-navigation-progressbar">
-                    <img alt="heat map" class="live4player-navigation-progressbar-heatmap" />
-                    <div class="live4player-navigation-progressbar-seekable"></div>
-                    <div class="live4player-navigation-progressbar-progress"></div>
-                </div>
-                <div class="live4player-navigation-play"></div>
-                <div class="live4player-navigation-pause"></div>
-                <div class="live4player-navigation-mute"></div>
-                <div class="live4player-navigation-unmute"></div>
-                <div class="live4player-navigation-fson"></div>
-                <div class="live4player-navigation-fsoff"></div>
-                <div class="live4player-navigation-time">
-                    <div class="live4player-navigation-time-current"></div>
-                    <div class="live4player-navigation-time-separator">/</div>
-                    <div class="live4player-navigation-time-duration"></div>
-                </div>
-            </div>
+<body>
+    <form action="/register/" method="post" class="registration_form">
+        <h2 class="title">Реєстрація</h2>
+        <fieldset>
+            <label for="register-name">Им’я користувача</label>
+            <input type="text" name="name" id="register-name" value="" required="required" class="name" />
+            <label for="register-email">E-mail</label>
+            <input type="email" name="email" id="register-email" value="" required="required" class="email" />
+            <button type="submit">Зареєструватися</button>
+        </fieldset>
+        <nav>
+            <p>Ви також можете скористуватися реєстрацією соціальних мереж</p><a href="https://www.facebook.com/ARTERIUM.corp" class="fb">Facebook</a><a href="#" class="vk">ВКонтакте</a>
+        </nav>
+        <nav>
+            <p>Для детального ознайомлення перейдіть на сайт</p><a href="http://academy.arterium.ua/" class="site">Перейти на сайт</a>
+        </nav>
+    </form>
+    <header>
+        <h2 class="section-title"><span>Приєднуйтесь до участі в проекті прямо зараз!</span></h2>
+        <div class="wrapper"><a href="/"><h1 class="logotype">Академiя артерiум</h1></a>
+            <h3 class="title">Перша медична спільнота </h3>
+            <p>Приєднуйтесь до професійної спільноти, яка об'єднує лікарів і фармацевтів усієї України. Спілкуйтесь з колегами та обмінюйтесь досвідом та знаннями з найкращими фахівцями. Стати учасником спільноти «Академія Артеріум» дуже просто!</p>
         </div>
-        <div class="details">
-            <p class="geo">Horkoho Street, 33, Kiev, Kyiv city, Ukraine</p>
-            <time datetime="2014-09-30T03:20">Started 20 hrs ago</time>
-            <nav><a href="http://www.facebook.com/sharer.php?u=http://live4.io/stream/597722146/GOPRO20140930170532.MP4&amp;t=Best%20Video%20Ever" class="fb">Facebook</a><a href="https://twitter.com/share?url=http://live4.io/stream/597722146/GOPRO20140930170532.MP4&amp;text=Best%20Video%20Ever"
-                class="tw">Twitter</a><a href="http://live4.io/stream/597722146/GOPRO20140930170532.MP4" class="copy">Copy link</a>
-            </nav>
-        </div>
-    </article>
-    <article>
-        <div data-id="" class="live4player">
-            <div class="live4player-base"></div>
-            <video width="100%" height="100%" preload="metadata" fullscreenEnabled="fullscreenEnabled" class="live4player-video"></video>
-            <div class="live4player-watermark"></div>
-            <div class="live4player-loading-screen">
-                <div class="live4player-loading-screen-icon"></div>
-            </div>
-            <div class="live4player-navigation">
-                <div class="live4player-navigation-progressbar">
-                    <img alt="heat map" class="live4player-navigation-progressbar-heatmap" />
-                    <div class="live4player-navigation-progressbar-seekable"></div>
-                    <div class="live4player-navigation-progressbar-progress"></div>
-                </div>
-                <div class="live4player-navigation-play"></div>
-                <div class="live4player-navigation-pause"></div>
-                <div class="live4player-navigation-mute"></div>
-                <div class="live4player-navigation-unmute"></div>
-                <div class="live4player-navigation-fson"></div>
-                <div class="live4player-navigation-fsoff"></div>
-                <div class="live4player-navigation-time">
-                    <div class="live4player-navigation-time-current"></div>
-                    <div class="live4player-navigation-time-separator">/</div>
-                    <div class="live4player-navigation-time-duration"></div>
-                </div>
-            </div>
-        </div>
-        <div class="details">
-            <p class="geo">Horkoho Street, 33, Kiev, Kyiv city, Ukraine</p>
-            <time datetime="2014-09-30T03:20">Started 20 hrs ago</time>
-            <nav><a href="http://www.facebook.com/sharer.php?u=http://live4.io/stream/597722146/GOPRO20140930170532.MP4&amp;t=Best%20Video%20Ever" class="fb">Facebook</a><a href="https://twitter.com/share?url=http://live4.io/stream/597722146/GOPRO20140930170532.MP4&amp;text=Best%20Video%20Ever"
-                class="tw">Twitter</a><a href="http://live4.io/stream/597722146/GOPRO20140930170532.MP4" class="copy">Copy link</a>
-            </nav>
+    </header>
+    <article class="questions">
+        <h2 class="section-title"><span>Ставте запитання і отримуйте докладну відповідь </span></h2>
+        <div class="wrapper">
+            <section>
+                <h3 class="title">У вас є запитання до колег або експертів? </h3>
+                <p>Учасники спільноти можуть ставити запитання нашим експертам, а також голосувати за запитання своїх колег та обговорювати їх з учасниками.</p>
+            </section>
+            <section>
+                <h3 class="title">як вам зручніше отримати відповідь? </h3>
+                <p>Наприкінці місяця експерти відповідають на запитання спільноти. Відповіді можна отримати у відеоролику або у форматі текстової презентації.</p>
+            </section>
         </div>
     </article>
+    <article class="best">
+        <h2 class="section-title"><span>на вас чекають кращі фахівці різних галузей медицини!</span></h2>
+        <div class="slider">
+            <div class="wrapper">
+                <h3 class="title">Експерти місяця</h3>
+                <div class="slides">
+                    <nav>
+                        <div class="next"></div>
+                        <div class="prev"></div>
+                    </nav>
+                    <div class="list jump">
+                        <div class="slide">
+                            <img src="images/face.png" alt="Фотокартка" />
+                            <div class="abstract">
+                                <p>На запитання відповідає:</p>
+                                <p class="name">Ігор Березняков</p>
+                                <p class="details">д.м.н., професор, завідуючий кафедрою терапії Харківської медичної академії післядипломної освіти, президент Української асоціації за раціональне використання антибіотиків</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/face.png" alt="Фотокартка" />
+                            <div class="abstract">
+                                <p>На запитання відповідає:</p>
+                                <p class="name">Багабут Маламутович</p>
+                                <p class="details">д.м.н., професор, завідуючий кафедрою терапії Харківської медичної академії післядипломної освіти, президент Української асоціації за раціональне використання антибіотиків</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="wrapper"><a href="http://territory.com.ua/" class="developed_by">CBT</a>
+            <p class="copyright">© 2014 Корпорація Arterium</p><a href="http://academy.arterium.ua/ru/page/terms" class="rules">Умови використання</a>
+        </div>
+    </footer>
 </body>
 
 </html>
